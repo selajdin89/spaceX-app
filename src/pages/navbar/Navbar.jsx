@@ -9,7 +9,7 @@ const Navbar = () => {
           <NavLink>Rockets</NavLink>
           <NavLink>Missions</NavLink>
           <NavLink>My Profile</NavLink>
-          <NavLink>Dragons</NavLink>
+          <NavLink to="/dragons" >Dragons</NavLink>
         </ul>
       </nav>
     </div>

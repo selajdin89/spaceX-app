@@ -1,10 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+// index.js (or your root file)
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './pages/dragons/store';; 
+import App from './App'; 
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+ReactDOM.render(
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
-)
+  </Provider>,
+  document.getElementById('root')
+);
+
+

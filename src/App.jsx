@@ -1,6 +1,7 @@
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Navbar from './pages/navbar/Navbar';
 import Rockets from './pages/rockets/Rockets';
+import Dragons from './pages/dragons/Dragons';
 
 function App() {
   const Layout = () => {
@@ -20,6 +21,10 @@ function App() {
         {
           path: '/',
           element: <Rockets />,
+        },
+        {
+          path: '/dragons',
+          element: <Dragons />,
         },
       ],
     },
