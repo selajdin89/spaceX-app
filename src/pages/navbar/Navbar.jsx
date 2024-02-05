@@ -7,7 +7,7 @@ const Navbar = () => {
       <nav>
         <ul>
           <NavLink>Rockets</NavLink>
-          <NavLink>Missions</NavLink>
+          <NavLink to="/missions">Missions</NavLink>
           <NavLink>My Profile</NavLink>
           <NavLink>Dragons</NavLink>
         </ul>
