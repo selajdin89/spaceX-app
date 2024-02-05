@@ -18,7 +18,7 @@ function App() {
       element: <Layout />,
       children: [
         {
-          index: true,
+          path: '/',
           element: <Rockets />,
           loader: rocketsLoader,
         },
