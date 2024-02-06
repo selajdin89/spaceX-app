@@ -1,15 +1,15 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setMissions } from '../../redux/missions/missionSlice';
-import axios from 'axios'
-;
+import axios from 'axios';
 const Missions = () => {
   const dispatch = useDispatch();
   const missions = useSelector((state) => state.missions);
 
   useEffect(() => {
-    if(missions.length === 0) {
-        axios.get('https://api.spacexdata.com/v3/missions')
+    if (missions.length === 0) {
+      axios
+        .get('https://api.spacexdata.com/v3/missions')
         .then((response) => {
           dispatch(setMissions(response.data));
         })
@@ -17,7 +17,7 @@ const Missions = () => {
           console.error('Error fetching missions:', error);
         });
     }
-  }, [dispatch]);
+  }, [dispatch, missions.length]);
 
   return (
     <div>
