@@ -1,15 +1,10 @@
 .nav-bar {
-<<<<<<< HEAD
-  background-color: #fdfdfd;
-  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
-=======
   background-color: #bdcbd7;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 3;
->>>>>>> f948a04cea648b203832e7271037e428e66f2c66
 }
 nav {
   padding: 25px 35px;
@@ -39,8 +34,6 @@ a {
 #nav-bar a.active {
   border-bottom: 1.5px solid rgba(0, 0, 0, 0.7);
 }
-<<<<<<< HEAD
-=======
 
 .menu-btn {
   display: none;
@@ -80,4 +73,3 @@ a {
     height: 100vh;
   }
 }
->>>>>>> f948a04cea648b203832e7271037e428e66f2c66

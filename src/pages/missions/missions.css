@@ -1,25 +1,15 @@
 .missions {
     width: 80%;
-<<<<<<< HEAD
-    margin: 50px auto;
-=======
     margin: 170px auto;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 0 8px 0 rgba(128,128,128,0.5);
->>>>>>> f948a04cea648b203832e7271037e428e66f2c66
 }
   
 .missions-content {
     width: 100%;
     border-collapse: collapse;
-<<<<<<< HEAD
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 8px 0 rgba(128,128,128,0.5);
-=======
     overflow-x: auto;
->>>>>>> f948a04cea648b203832e7271037e428e66f2c66
 }
   
 .missions-content th, .missions-content td {
@@ -41,14 +31,11 @@
 
 .missions-content .mission-desc {
     text-align: left;
-<<<<<<< HEAD
-=======
     font-style: italic;
 }
 
 .missions-content .join-leave {
     width: 170px;
->>>>>>> f948a04cea648b203832e7271037e428e66f2c66
 }
 
 .missions-content .btn {
@@ -64,9 +51,6 @@
 
 .missions-content .btn:hover {
     background-color: #ddd;
-<<<<<<< HEAD
-}
-=======
 }
 
 .missions-content .member {
@@ -98,4 +82,3 @@
         font-size: 14px;
     }
 }
->>>>>>> f948a04cea648b203832e7271037e428e66f2c66
