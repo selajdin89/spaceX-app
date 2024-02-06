@@ -10,7 +10,7 @@ const MyProfile = () => {
   return (
     <div className='my-profile'>
       <div className='stats'>
-        <div className='rockets-stats grid-item'>
+        <div className='item-stats grid-item'>
           <h2>Reserved Rockets 🚀</h2>
           {reservedRockets.length !== 0 ? (
             reservedRockets.map((rocket) => (

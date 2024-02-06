@@ -22,9 +22,12 @@
   background-color: #f9f9f9;
 }
 h2 {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
-li {
+.item-stats li {
   list-style: none;
   font-size: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+  padding: 5px;
 }
