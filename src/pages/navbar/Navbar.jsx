@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from '../../assets/images/spacex-logo1.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -27,7 +28,7 @@ const Navbar = () => {
             <NavLink to='/my-profile'>My Profile</NavLink>
           </li>
           <li onClick={() => handleMenuOpen()}>
-            <NavLink>Dragons</NavLink>
+            <NavLink to= '/dragons'>Dragons</NavLink>
           </li>
         </ul>
         <button
