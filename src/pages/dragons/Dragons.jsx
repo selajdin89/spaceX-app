@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setDragons, reserveDragon, cancelReservation } from '../../redux/dragons/dragonsSlice'; // Importing Redux actions
+import { setDragons, reserveDragon, cancelReservation } from '../../redux/dragons/dragonsSlice'; 
 import axios from 'axios';
 import './dragons.css'; 
 
@@ -9,11 +9,11 @@ const Dragons = () => {
   const dragons = useSelector((state) => state.dragons.dragons);
 
   useEffect(() => {
-    if (dragons.length === 0) { // Fetch dragons if the dragons array is empty
+    if (dragons.length === 0) { 
       axios
         .get('https://api.spacexdata.com/v3/dragons')
         .then((response) => {
-          dispatch(setDragons(response.data)); // Dispatch setDragons action to update Redux store
+          dispatch(setDragons(response.data)); 
         })
         .catch((error) => {
           console.error('Error fetching dragons:', error);
@@ -22,11 +22,11 @@ const Dragons = () => {
   }, [dispatch, dragons.length]);
 
   const handleReserveDragon = (dragon_id) => {
-    dispatch(reserveDragon({ id: dragon_id })); // Dispatch reserveDragon action with dragon id
+    dispatch(reserveDragon({ id: dragon_id })); 
   };
 
   const handleCancelReservation = (dragon_id) => {
-    dispatch(cancelReservation({ id: dragon_id })); // Dispatch cancelReservation action with dragon id
+    dispatch(cancelReservation({ id: dragon_id })); 
   };
 
   return (
