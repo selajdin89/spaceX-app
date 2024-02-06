@@ -1,5 +1,10 @@
 .my-profile {
+<<<<<<< HEAD
   padding: 30px 100px;
+=======
+  width: 80%;
+  margin: 170px auto;
+>>>>>>> f948a04cea648b203832e7271037e428e66f2c66
   display: flex;
   justify-content: center;
 }
