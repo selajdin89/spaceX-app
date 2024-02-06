@@ -30,4 +30,6 @@ export const rocketsLoader = async () => {
   const res = await fetch('https://api.spacexdata.com/v3/rockets');
 
   return res.json();
+
 };
+
