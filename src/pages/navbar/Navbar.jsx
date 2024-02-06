@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/images/spacex-logo1.png';
 import './Navbar.css';
@@ -28,9 +28,10 @@ const Navbar = () => {
             <NavLink to='/my-profile'>My Profile</NavLink>
           </li>
           <li onClick={() => handleMenuOpen()}>
-            <NavLink to= '/dragons'>Dragons</NavLink>
+            <NavLink to='/dragons'>Dragons</NavLink>
           </li>
         </ul>
+        <img className='logo' src={logo} alt='App Logo' />
         <button
           type='button'
           onClick={() => handleMenuOpen()}
