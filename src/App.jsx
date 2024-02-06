@@ -1,8 +1,8 @@
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Navbar from './pages/navbar/Navbar';
-import Rockets, { rocketsLoader } from './pages/rockets/Rockets';
+import Rockets from './pages/rockets/Rockets';
 import Missions from './pages/missions/Missions';
-
+import MyProfile from './pages/myProfile/MyProfile';
 
 function App() {
   const Layout = () => {
@@ -22,11 +22,14 @@ function App() {
         {
           path: '/',
           element: <Rockets />,
-          loader: rocketsLoader,
         },
         {
           path: '/missions',
           element: <Missions />,
+        },
+        {
+          path: '/my-profile',
+          element: <MyProfile />,
         },
       ],
     },
