@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import logo from '../../assets/images/spacex-logo1.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -11,6 +12,7 @@ const Navbar = () => {
           <NavLink to='/my-profile'>My Profile</NavLink>
           <NavLink>Dragons</NavLink>
         </ul>
+        <img className='logo' src={logo} alt='App Logo' />
       </nav>
     </div>
   );
