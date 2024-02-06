@@ -1,0 +1,84 @@
+.missions {
+    width: 80%;
+    margin: 170px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 8px 0 rgba(128,128,128,0.5);
+}
+  
+.missions-content {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+}
+  
+.missions-content th, .missions-content td {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+  
+.missions-content th {
+    background-color: #f2f2f2;
+    font-size: 20px;
+    color: #000000b3;
+}
+
+.missions-content td {
+    font-size: 16px;
+    color: #000000b3;
+}
+
+.missions-content .mission-desc {
+    text-align: left;
+    font-style: italic;
+}
+
+.missions-content .join-leave {
+    width: 170px;
+}
+
+.missions-content .btn {
+    cursor: pointer;
+    width: 80%;
+    padding: 10px 20px;
+    border: none;
+    background-color: #bdcbd7;
+    border-radius: 10px;
+    color: #000000b3;
+    transition: all 0.3s ease-in-out;
+}
+
+.missions-content .btn:hover {
+    background-color: #ddd;
+}
+
+.missions-content .member {
+    font-family: 'Protest Guerrilla', sans-serif;
+    letter-spacing: 1px;
+    color: #d20303;
+}
+
+.missions-content .member.active {
+    color: green;
+}
+
+
+@media (max-width: 850px) {
+    .missions {
+        overflow-x: scroll;
+    }
+    
+    .missions-content th,
+    .missions-content td {
+        padding: 10px;
+    }
+
+    .missions-content th {
+        font-size: 16px;
+    }
+
+    .missions-content td {
+        font-size: 14px;
+    }
+}

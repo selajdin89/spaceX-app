@@ -1,6 +1,9 @@
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Navbar from './pages/navbar/Navbar';
 import Rockets from './pages/rockets/Rockets';
+import Dragons from './pages/dragons/Dragons';
+import Missions from './pages/missions/Missions';
+import MyProfile from './pages/myProfile/MyProfile';
 
 function App() {
   const Layout = () => {
@@ -20,6 +23,18 @@ function App() {
         {
           path: '/',
           element: <Rockets />,
+        },
+        {
+          path: '/missions',
+          element: <Missions />,
+        },  
+        {
+          path: '/dragons',
+          element: <Dragons />,
+        },
+        {
+          path: '/my-profile',
+          element: <MyProfile />,
         },
       ],
     },
