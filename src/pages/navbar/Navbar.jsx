@@ -25,10 +25,10 @@ const Navbar = () => {
             <NavLink to='/missions'>Missions</NavLink>
           </li>
           <li onClick={() => handleMenuOpen()}>
-            <NavLink to='/my-profile'>My Profile</NavLink>
+            <NavLink to='/dragons'>Dragons</NavLink>
           </li>
           <li onClick={() => handleMenuOpen()}>
-            <NavLink to='/dragons'>Dragons</NavLink>
+            <NavLink to='/my-profile'>My Profile</NavLink>
           </li>
         </ul>
         <img className='logo' src={logo} alt='App Logo' />
