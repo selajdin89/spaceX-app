@@ -1,18 +1,39 @@
+import React, {useState} from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../../assets/images/spacex-logo1.png';
 import './Navbar.css';
 
 const Navbar = () => {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuOpen = () => {
+    if (window.innerWidth <= 768) {
+      setIsMenuOpen(!isMenuOpen);
+      const navbar = document.querySelector(".nav-bar");
+      navbar.classList.toggle('open', isMenuOpen);
+    }
+  }
+
   return (
-    <div className='nav-bar'>
+    <div className={`nav-bar ${isMenuOpen ? 'open': ''}`}>
       <nav id='nav-bar'>
         <ul>
-          <NavLink to='/'>Rockets</NavLink>
-          <NavLink to='/missions'>Missions</NavLink>
-          <NavLink to='/my-profile'>My Profile</NavLink>
-          <NavLink>Dragons</NavLink>
+          <li onClick={() => handleMenuOpen()}>
+            <NavLink to='/'>Rockets</NavLink>
+          </li>
+          <li onClick={() => handleMenuOpen()}>
+            <NavLink to='/missions'>Missions</NavLink>
+          </li>
+          <li onClick={() => handleMenuOpen()}>
+            <NavLink to='/my-profile'>My Profile</NavLink>
+          </li>
+          <li onClick={() => handleMenuOpen()}>
+            <NavLink>Dragons</NavLink>
+          </li>
         </ul>
-        <img className='logo' src={logo} alt='App Logo' />
+        <button type="button" onClick={() => handleMenuOpen()} className="menu-btn">
+          <span>Menu</span>
+        </button>
       </nav>
     </div>
   );

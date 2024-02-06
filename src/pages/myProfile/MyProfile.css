@@ -1,5 +1,6 @@
 .my-profile {
-  padding: 30px 100px;
+  width: 80%;
+  margin: 170px auto;
   display: flex;
   justify-content: center;
 }
