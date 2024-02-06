@@ -1,8 +1,12 @@
 .nav-bar {
-  background-color: #bdcbd7;
+  background-color: #fdfdfd;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
 nav {
-  padding: 35px;
+  padding: 25px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 ul {
@@ -15,6 +19,11 @@ a {
   font-weight: 600;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+  width: 120px;
+  height: 40px;
 }
 #nav-bar a.active {
   border-bottom: 1.5px solid rgba(0, 0, 0, 0.7);
