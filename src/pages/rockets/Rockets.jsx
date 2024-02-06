@@ -31,21 +31,21 @@ const Rockets = () => {
     <div className='rockets'>
       {rockets?.map((rocket) => (
         <div className='rocket-item' key={rocket.id}>
-          <p>Name:{rocket.rocket_name}</p>
-          {rocket.reserved && <span>RESERVED</span>}
+          <p>{rocket.rocket_name}</p>
+          {rocket.reserved && <span className="reserved">RESERVED</span>}
 
           <img src={rocket.flickr_images} alt='' />
-          <h3>Description</h3>
-          <p>{rocket.description}</p>
+          <p className="desc">{rocket.description}</p>
           {!rocket.reserved ? (
-            <button onClick={() => dispatch(reserveRocket({ id: rocket.id }))}>
-              Reserve rocket 🚀
+            <button className="rockets-btn" onClick={() => dispatch(reserveRocket({ id: rocket.id }))}>
+              Reserve Rocket 🚀
             </button>
           ) : (
             <button
+              className="rockets-btn"
               onClick={() => dispatch(cancelReservation({ id: rocket.id }))}
             >
-              Cancel Rocket
+              Cancel Rocket 🚀
             </button>
           )}
         </div>

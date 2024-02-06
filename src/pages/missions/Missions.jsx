@@ -38,6 +38,7 @@ const Missions = () => {
             <th>Name</th>
             <th>Description</th>
             <th>Join/Leave</th>
+            <th>Member</th>
           </tr>
         </thead>
         <tbody>
@@ -46,22 +47,25 @@ const Missions = () => {
               <td>{mission.mission_id}</td>
               <td>{mission.mission_name}</td>
               <td className="mission-desc">{mission.description}</td>
+              <td className="join-leave">
+                {
+                  mission.reserved ? (
+                    <button type="button" className="btn" onClick={() => handleLeaveMission(mission.mission_id)}>
+                      Leave🌌
+                    </button>
+                  ) : (
+                    <button type="button" className="btn" onClick={() => handleJoinMission(mission.mission_id)}>
+                      Join🌌
+                    </button>
+                  )
+                }
+              </td>
               <td>
                 {
                   mission.reserved ? (
-                    <>
-                      <span>Active Member</span>
-                      <button type="button" className="btn" onClick={() => handleLeaveMission(mission.mission_id)}>
-                        Leave
-                      </button>
-                    </>
+                    <span className="member active">Active Member</span>
                   ) : (
-                    <>
-                      <span>Not a Member</span>
-                      <button type="button" className="btn" onClick={() => handleJoinMission(mission.mission_id)}>
-                        Join
-                      </button>
-                    </>
+                    <span className="member">Not a Member</span>
                   )
                 }
               </td>
