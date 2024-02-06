@@ -1,17 +1,61 @@
 .dragons-container {
-    padding: 20px;
-    margin: 20px;
-  }
-  
-  .dragon-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .dragon-card img {
-    max-width: 100%;
-    height: auto;
-  }
-  
+  min-width: 350px;
+  width: 50%;
+  margin: 170px auto;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 50px;
+}
+
+.dragon-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  width: 100%;
+  border: 1px solid lightgrey;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  font-size: 18px;
+}
+
+.dragon-card p {
+  color: #000000b3;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin: 15px 0;
+}
+
+.button-container {
+  align-self: flex-end;
+}
+
+.dragons-btn {
+  margin-top: auto;
+  align-self: flex-end;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  background-color: #bdcbd7;
+  border-radius: 10px;
+  color: #000000b3;
+  transition: all 0.3s ease-in-out;
+}
+
+.reserved {
+  font-family: 'Protest Guerrilla', sans-serif;
+  color: rgb(210 3 3);
+  width: fit-content;
+  border: 2px solid rgb(210 3 3);
+  padding: 1px 2px;
+  top: 10px;
+  right: 15px;
+  position: absolute;
+}

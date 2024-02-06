@@ -6,6 +6,8 @@ const MyProfile = () => {
   const reservedRockets = rockets.filter((rocket) => rocket.reserved);
   const missions = useSelector((state) => state.missions);
   const joinedMissions = missions.filter((mission) => mission.reserved);
+  const dragons = useSelector((state) => state.dragons.dragons);
+  const reservedDragons = dragons.filter((dragon) => dragon.reserved);
 
   return (
     <div className='my-profile'>
@@ -20,7 +22,7 @@ const MyProfile = () => {
             <p>No rockets reserved!</p>
           )}
         </div>
-        <div className='missions-stats grid-item'>
+        <div className='item-stats grid-item'>
           <h2>Joined Missions 🌌</h2>
           {joinedMissions.length !== 0 ? (
             joinedMissions.map((mission) => (
@@ -30,8 +32,15 @@ const MyProfile = () => {
             <p>No missions joined!</p>
           )}
         </div>
-        <div className='dragon-stats grid-item'>
-          <h2>Reserved Dragons</h2>
+        <div className='item-stats grid-item'>
+          <h2>Reserved Dragons 🚀</h2>
+          {reservedDragons.length !== 0 ? (
+            reservedDragons.map((dragon) => (
+              <li key={dragon.id}>{dragon.name}</li>
+            ))
+          ) : (
+            <p>No dragons reserved!</p>
+          )}
         </div>
       </div>
     </div>
