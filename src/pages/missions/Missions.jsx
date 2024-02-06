@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setMissions, joinMission, leaveMission } from '../../redux/missions/missionSlice';
 import axios from 'axios';
 import './missions.css';
-;
+
 const Missions = () => {
   const dispatch = useDispatch();
   const missions = useSelector((state) => state.missions);
